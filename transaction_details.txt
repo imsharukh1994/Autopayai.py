@@ -1,0 +1,35 @@
+Payment Details:
+Due: Phone bill, Amount: INR 75
+Transaction ID: 7KYRP6B4, Payment Method: upi
+UPI Transaction Details - Transaction ID: 7KYRP6B4, From: user@fakeupi.com, To: Mashableindia@upi
+
+Payment Details:
+Due: Phone bill, Amount: INR 75
+Transaction ID: ZP6Z2I87, Payment Method: upi
+UPI Transaction Details - Transaction ID: ZP6Z2I87, From: user@fakeupi.com, To: karank@upi
+
+Payment Details:
+Due: Phone bill, Amount: INR 75
+Transaction ID: JGJFE35L, Payment Method: UPI
+
+Payment Details:
+Due: Phone bill, Amount: INR 75
+Transaction ID: E8DEJ1SX, Payment Method: UPI
+
+Payment Details:
+Due: Phone bill, Amount: INR 75
+Transaction ID: 7DFTJJ9W, Payment Method: UPI
+
+Payment Details:
+Due: Phone bill, Amount: INR 75
+Transaction ID: HJR7HNEN, Payment Method: UPI
+
+Payment Details:
+Due: Phone bill, Amount: INR 75
+Transaction ID: EEUG2Z28, Payment Method: UPI
+
+Payment Details:
+Due: Phone bill, Amount: INR 75
+Transaction ID: 4I61L7M8, Payment Method: upi
+UPI Transaction Details - Transaction ID: 4I61L7M8, From: sonalis@paytm, To: keval@upi
+
