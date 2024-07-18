@@ -33,3 +33,8 @@ Due: Phone bill, Amount: INR 75
 Transaction ID: 4I61L7M8, Payment Method: upi
 UPI Transaction Details - Transaction ID: 4I61L7M8, From: sonalis@paytm, To: keval@upi
 
+Payment Details:
+Due: Phone bill, Amount: INR 75
+Transaction ID: MTN3NEO8, Payment Method: upi
+UPI Transaction Details - Transaction ID: MTN3NEO8, From: 8879892250@sbi, To: test@sbi
+

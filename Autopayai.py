@@ -1,6 +1,6 @@
-import time
 import random
 import string
+import time  # Importing time module for sleep function
 
 class Billy:
     def __init__(self):
@@ -33,6 +33,7 @@ class Billy:
         return ''.join(random.choices(string.ascii_uppercase + string.digits, k=8))
 
     def process_payment(self, selected_due, dues):
+        selected_due = selected_due.strip()  # Strip leading and trailing whitespace
         user_input = input("Billy: Do you want to pay this due? (yes/no): ").lower()
         if user_input == "yes":
             payment_method = input("Billy: Please select a payment method (credit card/bank/upi): ").lower()
@@ -54,25 +55,28 @@ class Billy:
                 print("Billy: Invalid payment method selected.")
                 return
 
-            print(f"Billy: Starting payment process for {selected_due}...")
-            print("Billy: Processing payment...")
-            time.sleep(3)  # Simulating payment process
-            print("Billy: Payment successful!")
-            transaction_id = self.generate_transaction_id()
-            print(f"Billy: Payment details - Due: {selected_due}, Amount: INR {dues[selected_due]}, "
-                  f"Transaction ID: {transaction_id}, Payment Method: {payment_method}")
-            if payment_method == "bank":
-                print("Billy: Bank Account Details - Account Holder Name:", account_name,
-                      "Account Number:", account_number, "IFSC Code:", ifsc_code)
-            elif payment_method == "upi":
-                print("Billy: UPI Transaction Details - Transaction ID:", transaction_id,
-                      "From:", from_upi, "To:", to_upi)
-            self.save_transaction_details(selected_due, dues[selected_due], transaction_id, payment_method,
-                                          account_name if payment_method == "bank" else None,
-                                          account_number if payment_method == "bank" else None,
-                                          ifsc_code if payment_method == "bank" else None,
-                                          from_upi if payment_method == "upi" else None,
-                                          to_upi if payment_method == "upi" else None)
+            if selected_due in dues:  # Check if selected_due exists in dues keys
+                print(f"Billy: Starting payment process for {selected_due}...")
+                print("Billy: Processing payment...")
+                time.sleep(3)  # Simulating payment process
+                print("Billy: Payment successful!")
+                transaction_id = self.generate_transaction_id()
+                print(f"Billy: Payment details - Due: {selected_due}, Amount: INR {dues[selected_due]}, "
+                      f"Transaction ID: {transaction_id}, Payment Method: {payment_method}")
+                if payment_method == "bank":
+                    print("Billy: Bank Account Details - Account Holder Name:", account_name,
+                          "Account Number:", account_number, "IFSC Code:", ifsc_code)
+                elif payment_method == "upi":
+                    print("Billy: UPI Transaction Details - Transaction ID:", transaction_id,
+                          "From:", from_upi, "To:", to_upi)
+                self.save_transaction_details(selected_due, dues[selected_due], transaction_id, payment_method,
+                                              account_name if payment_method == "bank" else None,
+                                              account_number if payment_method == "bank" else None,
+                                              ifsc_code if payment_method == "bank" else None,
+                                              from_upi if payment_method == "upi" else None,
+                                              to_upi if payment_method == "upi" else None)
+            else:
+                print(f"Billy: {selected_due} not found in dues. Please select a valid due.")
         elif user_input == "no":
             print("Billy: Okay, let me know if you need anything else.")
         else:
